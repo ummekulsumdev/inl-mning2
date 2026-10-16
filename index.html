@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Catalog</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+
+    <!-- Arbetar med header-sektionen -->
+
+    <header>
+
+        <nav>
+            <a href="#home">Movie Catalog</a>
+
+            <button id="menu-toggle">☰</button>
+
+            <ul id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#catalog">Movies</a></li>
+                <li><a href="#add-movie">Add Movie</a></li>
+            </ul>
+        </nav>
+
+
+
+        <section id="home">
+            <h1>Find Your Next Favourite Movie</h1>
+            <p>Explore movies and discover new stories.</p>
+            <a href="#catalog">Explore Movies</a>
+        </section>
+
+
+    </header>
+
+
+    <!-- Arbetat klart med header-sektionen -->
+
+
+    <!-- Arbetar med main-sektionen -->
+
+
+
+
+    <main>
+
+        <section id="catalog">
+
+            <h2>Movie Collection</h2>
+            <p>Browse movies in our collection.</p>
+
+
+
+
+            <label for="category-filter">Filter by category:</label>
+
+            <select id="category-filter">
+                <option value="all">All Movies</option>
+                <option value="Action">Action</option>
+                <option value="Sci-fi">Sci-fi</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+            </select>
+
+
+
+            <!-- Här visas filmerna från JavaScript -->
+            <div id="movie-list"></div>
+
+
+        </section>
+
+
+        <section id="add-movie">
+
+            <h2>Add a Movie</h2>
+
+
+            <form id="movie-form">
+                <label for="movie-title">Movie title:</label>
+                <input type="text" id="movie-title" required>
+
+
+
+                <label for="movie-category">Category:</label>
+
+                <select id="movie-category" required>
+                    <option value="">Choose a category</option>
+                    <option value="Action">Action</option>
+                    <option value="Sci-fi">Sci-fi</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                </select>
+
+
+
+                <label for="movie-year">Release year:</label>
+                <input type="number" id="movie-year" min="1888" max="2100" required>
+
+
+                <button type="submit">Add Movie</button>
+
+
+            </form>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- Arbetat klart med main-sektionen -->
+
+    <!-- Arbetar med footer-sektionen -->
+
+
+
+    <footer>
+        <p>&copy; 2026 Movie Catalog</p>
+    </footer>
+
+
+
+</body>
+</html>

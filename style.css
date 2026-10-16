@@ -1,0 +1,276 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Arbetar med header-sektionen */
+header {
+    background-image: url("pexels-tima-miroshnichenko-7991486.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+
+#home {
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+
+#home h1 {
+    font-size: 40px;
+}
+
+#home p {
+    font-size: 18px;
+}
+
+
+#home a {
+    display: inline-block;
+    background-color: #e63946;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+/* Hamburger menu */
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+
+
+/* Arbetar med main-sektionen */
+
+
+main {
+    padding: 20px;
+}
+
+#catalog,
+#add-movie {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: lightgray;
+}
+
+#add-movie {
+    border-radius: 8px;
+}
+
+
+
+#movie-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+#movie-list div {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+
+#movie-list img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+#movie-list h3 {
+    margin: 10px 5px 5px;
+}
+
+#movie-list p {
+    margin: 5px 0;
+}
+
+
+
+/* Buttons */
+#movie-list button,
+#movie-form button {
+    background-color: #e63946;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+#movie-list button {
+    margin-top: 10px;
+}
+
+
+
+#movie-list button:hover,
+#movie-form button:hover {
+    background-color: #c1121f;
+}
+
+
+
+
+#add-movie h2 {
+    text-align: center;
+}
+
+
+#movie-form {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+
+#movie-form label {
+    display: block;
+    text-align: left;
+    margin: 15px 0 5px;
+}
+
+
+#movie-form input,
+#movie-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+
+#movie-form button {
+    display: block;
+    margin: 15px auto 0;
+    width: 150px;
+}
+
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+
+
+/* Mobile */
+
+/* Mobile */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: row;
+    }
+
+    #menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 55px;
+        right: 15px;
+        background-color: #222;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #catalog,
+    #add-movie {
+        padding: 15px;
+    }
+
+    #home h1 {
+        font-size: 28px;
+    }
+
+    #movie-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    #movie-list img {
+        height: 220px;
+    }
+
+    #movie-form input,
+    #movie-form select {
+        padding: 10px;
+    }
+
+    #movie-form button {
+        padding: 10px 15px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
